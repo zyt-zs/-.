@@ -1,0 +1,302 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, 'Segoe UI', 'Microsoft YaHei', sans-serif;
+  background: #f4f5f7;
+  color: #1f2328;
+  line-height: 1.6;
+}
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px 20px 64px;
+}
+
+.page h1 {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.subtitle {
+  margin: 0 0 32px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 20px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.card-title {
+  font-size: 19px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.tag {
+  flex-shrink: 0;
+  font-size: 13px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+
+/* 标签前面的小圆点，颜色自动跟文字色一致（currentColor） */
+.tag::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  margin-right: 6px;
+  vertical-align: 1px;
+}
+
+/* 进行中：蓝色 */
+.tag-doing {
+  background: #e7f0fe;
+  color: #1a56db;
+  border-color: #b3cdf9;
+}
+
+/* 已完成：绿色 */
+.tag-done {
+  background: #e4f5ec;
+  color: #0f7b3f;
+  border-color: #a8dfc1;
+}
+
+/* 暂停：灰色，和上面两个拉开色相差距，一眼能分辨 */
+.tag-pause {
+  background: #f1f2f4;
+  color: #6b7280;
+  border-color: #dcdfe4;
+}
+
+.desc {
+  margin: 12px 0 18px;
+  color: #4b5563;
+}
+
+.meta {
+  display: grid;
+  gap: 10px;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.meta-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-size: 14px;
+}
+
+.label {
+  color: #9ca3af;
+  flex-shrink: 0;
+}
+
+.tech {
+  display: inline-block;
+  font-size: 13px;
+  padding: 2px 9px;
+  border-radius: 6px;
+  background: #f2f3f5;
+  color: #48505c;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 18px;
+  font-size: 14px;
+  color: #1a56db;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.head-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.btn-primary {
+  flex-shrink: 0;
+  font: inherit;
+  font-size: 14px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #1a56db;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #1648b0;
+}
+
+.btn-ghost {
+  flex-shrink: 0;
+  font: inherit;
+  font-size: 14px;
+  padding: 8px 16px;
+  border: 1px solid #dcdfe4;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #48505c;
+  cursor: pointer;
+}
+
+.btn-ghost:hover {
+  background: #f7f8fa;
+}
+
+.form {
+  margin-bottom: 28px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  display: grid;
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.field input,
+.field textarea,
+.field select {
+  font: inherit;
+  font-size: 14px;
+  padding: 8px 10px;
+  border: 1px solid #dcdfe4;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #1f2328;
+  width: 100%;
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+  outline: none;
+  border-color: #1a56db;
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  padding-top: 4px;
+}
+
+.card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.confirm {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.confirm-text {
+  font-size: 14px;
+  color: #a32d2d;
+}
+
+.btn-sm {
+  font-size: 13px;
+  padding: 5px 12px;
+}
+
+.btn-danger {
+  flex-shrink: 0;
+  font: inherit;
+  font-size: 13px;
+  padding: 5px 12px;
+  border: none;
+  border-radius: 8px;
+  background: #e5484d;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.btn-danger:hover {
+  background: #c93b40;
+}
+
+.search-box {
+  margin-bottom: 24px;
+}
+
+.search-box input {
+  font: inherit;
+  font-size: 14px;
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #dcdfe4;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #1f2328;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #1a56db;
+}
+
+.empty {
+  padding: 40px 0;
+  text-align: center;
+  color: #9ca3af;
+}
